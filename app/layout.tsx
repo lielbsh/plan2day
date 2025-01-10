@@ -27,7 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex flex-col h-screen bg-slate-100 font-sans relative overflow-auto">
+          {children}
+
+          <footer className="bg-black p-4 justify-self-end">
+            <div className="container mx-auto text-center">
+              <p className="text-white">
+                &copy; {new Date().getFullYear()} Habit Tracker. All rights
+                reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
